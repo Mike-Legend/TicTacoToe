@@ -14,9 +14,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tic       Toe"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textSize="40sp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="25dp"
+        android:textSize="50sp"
         android:textStyle="bold"
         android:backgroundTint="#309C3E"
         android:textColor="@color/black"
@@ -35,19 +36,19 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/barrio"
-            android:text="Player-1 Score"
+            android:text="Player-1"
             android:layout_marginTop="15dp"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="23dp"
+            android:textSize="25dp"
             android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/text_player2"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Player-2 Score"
-            android:textSize="23dp"
+            android:text="Player-2"
+            android:textSize="25dp"
             android:layout_marginTop="15dp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -102,7 +103,7 @@
                 android:layout_height="115dp"
                 android:layout_marginHorizontal="0dp"
                 android:layout_marginBottom="0dp"
-                android:textSize="26dp" />
+                android:textSize="100dp" />
 
             <Button
                 android:id="@+id/btn1"
@@ -111,7 +112,7 @@
                 android:layout_height="115dp"
                 android:layout_marginHorizontal="0dp"
                 android:layout_marginBottom="0dp"
-                android:textSize="26dp" />
+                android:textSize="100dp" />
 
             <Button
                 android:id="@+id/btn2"
@@ -120,7 +121,7 @@
                 android:layout_height="115dp"
                 android:layout_marginHorizontal="0dp"
                 android:layout_marginBottom="0dp"
-                android:textSize="26dp" />
+                android:textSize="100dp" />
 
         </LinearLayout>
 
@@ -136,7 +137,7 @@
             android:layout_height="115dp"
             android:layout_marginHorizontal="0dp"
             android:layout_marginBottom="0dp"
-            android:textSize="26dp" />
+            android:textSize="100dp" />
 
         <Button
             android:id="@+id/btn4"
@@ -145,7 +146,7 @@
             android:layout_height="115dp"
             android:layout_marginHorizontal="0dp"
             android:layout_marginBottom="0dp"
-            android:textSize="26dp" />
+            android:textSize="100dp" />
 
         <Button
             android:id="@+id/btn5"
@@ -154,7 +155,7 @@
             android:layout_height="115dp"
             android:layout_marginHorizontal="0dp"
             android:layout_marginBottom="0dp"
-            android:textSize="26dp" />
+            android:textSize="100dp" />
 
         </LinearLayout>
 
@@ -170,7 +171,7 @@
             android:layout_height="115dp"
             android:layout_marginHorizontal="0dp"
             android:layout_marginBottom="0dp"
-            android:textSize="26dp" />
+            android:textSize="100dp" />
 
         <Button
             android:id="@+id/btn7"
@@ -179,7 +180,7 @@
             android:layout_height="115dp"
             android:layout_marginHorizontal="0dp"
             android:layout_marginBottom="0dp"
-            android:textSize="26dp" />
+            android:textSize="100dp" />
 
         <Button
             android:id="@+id/btn8"
@@ -188,11 +189,25 @@
             android:layout_height="115dp"
             android:layout_marginHorizontal="0dp"
             android:layout_marginBottom="0dp"
-            android:textSize="26dp" />
+            android:textSize="100dp" />
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/barrio"
+        android:text=" "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        tools:text='    ' />
 
     <Button
         android:id="@+id/btn_play_again"
@@ -201,9 +216,9 @@
         android:layout_below="@+id/layout_linear"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="103dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="60dp"
         android:backgroundTint="#309C3E"
         android:fontFamily="@font/barrio"
         android:text="Play Again"
@@ -217,22 +232,21 @@
         android:layout_below="@id/btn_play_again"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="103dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="103dp"
+        android:layout_marginEnd="80dp"
         android:backgroundTint="#AB0F2C"
         android:fontFamily="@font/barrio"
         android:text="Reset Game"
         android:textSize="24dp" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="115dp"
-        android:layout_height="52dp"
+        android:id="@+id/Taco"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
         android:layout_alignBottom="@+id/texttitle"
-        android:layout_marginStart="143dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginBottom="-2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-6dp"
         app:srcCompat="@drawable/taco" />
 
 </RelativeLayout>
