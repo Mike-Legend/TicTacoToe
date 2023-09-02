@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,93 +13,36 @@
         android:id="@+id/texttitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tic       Toe"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="25dp"
-        android:textSize="50sp"
-        android:textStyle="bold"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="#309C3E"
+        android:fontFamily="@font/barrio"
         android:shadowColor="@color/white"
         android:shadowRadius="20"
-        android:backgroundTint="#309C3E"
+        android:text="Tic       Toe"
         android:textColor="@color/black"
-        android:fontFamily="@font/barrio"/>
-
-    <RelativeLayout
-        android:id="@+id/relative_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/texttitle"
-        android:layout_marginBottom="20dp">
-
-        <TextView
-            android:id="@+id/text_player1"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/barrio"
-            android:text="Player-1"
-            android:layout_marginTop="15dp"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="25dp"
-            android:shadowColor="@color/white"
-            android:shadowRadius="12"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/text_player2"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Player-2"
-            android:textSize="25dp"
-            android:layout_marginTop="15dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:fontFamily="@font/barrio"
-            android:shadowColor="@color/white"
-            android:shadowRadius="12"
-            android:layout_toRightOf="@id/text_player1"/>
-
-        <TextView
-            android:id="@+id/score_Player1"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/barrio"
-            android:text="0"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="26dp"
-            android:textStyle="bold"
-            android:shadowColor="@color/white"
-            android:shadowRadius="12"
-            android:layout_below="@id/text_player1"/>
-
-        <TextView
-            android:id="@+id/score_Player2"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/barrio"
-            android:text="0"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="26dp"
-            android:textStyle="bold"
-            android:layout_below="@id/text_player2"
-            android:shadowColor="@color/white"
-            android:shadowRadius="12"
-            android:layout_toRightOf="@id/score_Player1"/>
-
-    </RelativeLayout>
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/score_Player2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
         android:id="@+id/layout_linear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/relative_layout">
+        android:layout_marginBottom="200dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_Player2">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -135,71 +78,71 @@
 
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btn3"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_marginHorizontal="0dp"
-            android:layout_marginBottom="0dp"
-            android:textSize="100dp" />
+            <Button
+                android:id="@+id/btn3"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_marginHorizontal="0dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="100dp" />
 
-        <Button
-            android:id="@+id/btn4"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_marginHorizontal="0dp"
-            android:layout_marginBottom="0dp"
-            android:textSize="100dp" />
+            <Button
+                android:id="@+id/btn4"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_marginHorizontal="0dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="100dp" />
 
-        <Button
-            android:id="@+id/btn5"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_marginHorizontal="0dp"
-            android:layout_marginBottom="0dp"
-            android:textSize="100dp" />
+            <Button
+                android:id="@+id/btn5"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_marginHorizontal="0dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="100dp" />
 
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btn6"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_marginHorizontal="0dp"
-            android:layout_marginBottom="0dp"
-            android:textSize="100dp" />
+            <Button
+                android:id="@+id/btn6"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_marginHorizontal="0dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="100dp" />
 
-        <Button
-            android:id="@+id/btn7"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_marginHorizontal="0dp"
-            android:layout_marginBottom="0dp"
-            android:textSize="100dp" />
+            <Button
+                android:id="@+id/btn7"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_marginHorizontal="0dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="100dp" />
 
-        <Button
-            android:id="@+id/btn8"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_marginHorizontal="0dp"
-            android:layout_marginBottom="0dp"
-            android:textSize="100dp" />
+            <Button
+                android:id="@+id/btn8"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_marginHorizontal="0dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="100dp" />
 
         </LinearLayout>
 
@@ -211,14 +154,21 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout_linear"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/barrio"
-        android:text=" "
-        android:textColor="@color/black"
         android:shadowColor="@color/white"
         android:shadowRadius="12"
+        android:text=" "
+        android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_play_again"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_linear"
         tools:text='    ' />
 
     <Button
@@ -228,16 +178,21 @@
         android:layout_below="@+id/layout_linear"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="5dp"
         android:backgroundTint="#309C3E"
         android:fontFamily="@font/barrio"
         android:shadowColor="@color/black"
         android:shadowRadius="15"
         android:text="Play Again"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStatus" />
 
     <Button
         android:id="@+id/btn_reset"
@@ -246,15 +201,20 @@
         android:layout_below="@id/btn_play_again"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="#AB0F2C"
         android:fontFamily="@font/barrio"
-        android:text="Reset Game"
         android:shadowColor="@color/black"
         android:shadowRadius="13"
-        android:textSize="24dp" />
+        android:text="Reset Game"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_play_again" />
 
     <ImageView
         android:id="@+id/Taco"
@@ -262,7 +222,93 @@
         android:layout_height="75dp"
         android:layout_alignBottom="@+id/texttitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-6dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_player2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/taco" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/score_Player2"
+        android:layout_width="175dp"
+        android:layout_height="27dp"
+        android:layout_below="@id/text_player2"
+        android:layout_marginEnd="6dp"
+        android:layout_toRightOf="@id/score_Player1"
+        android:fontFamily="@font/barrio"
+        android:shadowColor="@color/white"
+        android:shadowRadius="12"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/score_Player1"
+        app:layout_constraintTop_toBottomOf="@+id/text_player2" />
+
+    <TextView
+        android:id="@+id/text_player1"
+        android:layout_width="190dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/barrio"
+        android:shadowColor="@color/white"
+        android:shadowRadius="12"
+        android:text="Player-1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/score_Player2"
+        app:layout_constraintEnd_toStartOf="@+id/text_player2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texttitle" />
+
+    <TextView
+        android:id="@+id/score_Player1"
+        android:layout_width="193dp"
+        android:layout_height="27dp"
+        android:layout_below="@id/text_player1"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/barrio"
+        android:shadowColor="@color/white"
+        android:shadowRadius="12"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/layout_linear"
+        app:layout_constraintEnd_toStartOf="@+id/score_Player2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_player1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_player2"
+        android:layout_width="177dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@id/text_player1"
+        android:fontFamily="@font/barrio"
+        android:shadowColor="@color/white"
+        android:shadowRadius="12"
+        android:text="Player-2"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/score_Player2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_player1"
+        app:layout_constraintTop_toBottomOf="@+id/texttitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
